@@ -3,8 +3,7 @@
  * items-center => align-items: center; work in y-axis & work with flex
  */
 'use client';
-import Container  from '../Container'
-import React, { useState } from 'react'
+import Container  from '../Container';
 import Logo from './Logo'
 import Search from './Search'
 import { UserMenu } from './UserMenu';
