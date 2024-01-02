@@ -3,8 +3,16 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar/Navbar";
 import ClientOnly from "./components/ClientOnly";
+import Modals from "./components/modals/Modals";
 
 const inter = Inter({ subsets: ["latin"] });
+//Dummy
+const onClose = ()=>{
+  console.log("On close");
+}
+const onSubmit = ()=>{
+  console.log("On Submit");
+}
 
 export const metadata: Metadata = {
   title: "Airbnb",
@@ -20,6 +28,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ClientOnly>
+          <Modals isOpen title="Hello World"/>
           <Navbar />
         </ClientOnly>
         {children}
