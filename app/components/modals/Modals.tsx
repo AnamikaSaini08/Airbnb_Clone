@@ -32,7 +32,6 @@ const Modals: React.FC<ModalProps> = ({
     const [showModal,setShowModel] = useState(isOpen);
   
     useEffect(()=>{
-        console.log("Enter")
         setShowModel(isOpen);
     },[isOpen]);
 
@@ -172,7 +171,7 @@ const Modals: React.FC<ModalProps> = ({
                             onClick={handleSubmit}
                             />
                         </div>
-
+                        {footer}
                     </div>
                 </div>
 

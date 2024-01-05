@@ -3,7 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar/Navbar";
 import ClientOnly from "./components/ClientOnly";
-import Modals from "./components/modals/Modals";
+import RegisterModel from "./components/modals/RegisterModel";
+import ToasterProviders from "./components/providers/ToasterProviders";
 
 const inter = Inter({ subsets: ["latin"] });
 //Dummy
@@ -28,7 +29,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ClientOnly>
-          <Modals isOpen title="Hello World"/>
+          <ToasterProviders/>
+          <RegisterModel/>
           <Navbar />
         </ClientOnly>
         {children}
